@@ -1,0 +1,65 @@
+@import "./src/scss/variables";
+
+.timeLine{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  &__year {
+    position: absolute;
+    width: max-content;
+    top: 50%;
+    font-weight: 700;
+    transform: translate(-50%, -50%);
+    font-size: $size-xl;
+    z-index: 2;
+    left: 50%;
+
+    &-blue {
+      color: $color-blue;
+
+    }
+    &-pink {
+      color: $color-pink;
+
+    }
+  }
+
+  &__circle{
+    position: relative;
+    border: 2px solid #585858;
+    border-radius: 50%;
+
+
+    &::before,  &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+@media (max-width: 1140px) {
+  .timeLine{
+    display: grid;
+    justify-content: center;
+    margin-top: 56px;
+    &__year {
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      font-size: $size-l;
+      position: relative;
+    }}
+}

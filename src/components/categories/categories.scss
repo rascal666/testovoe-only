@@ -1,0 +1,39 @@
+@import './src/scss/variables';
+
+.circle{
+  position: relative;
+  border: 2px solid #585858;
+  border-radius: 50%;
+  z-index: 9;
+  margin: 15px auto;
+}
+
+.categories{
+  display: none;
+  flex-wrap: wrap;
+  grid-gap: 16px;
+  margin-top: 24px;
+  font-weight: bold;
+  color: $base-color;
+
+  &__item{
+    background: #ecedff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+@media (max-width: 1140px) {
+  .circle{
+    display: none;
+  }
+
+  .categories{
+    display: flex;
+  }
+}

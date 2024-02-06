@@ -1,0 +1,50 @@
+@import "./src/scss/variables";
+
+.InfoYear{
+  font-weight: bold;
+  margin-top: 56px;
+  position: relative;
+
+  &__contain{
+    display: grid;
+    align-content: baseline;
+    grid-gap: 15px;
+    max-width: 320px;
+  }
+
+  &__year{
+    color: $color-blue;
+    font-size: 25px;
+  }
+
+  &__text {
+    font-size: 20px;
+    color: $base-color;
+  }
+
+  &__error {
+    background: #5D5FEF;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .InfoYear {
+    border-top: 1px solid $color-opacity;
+    padding-top: 20px;
+
+    &__contain{
+      max-width: 100%;
+    }
+
+    &__year{
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+

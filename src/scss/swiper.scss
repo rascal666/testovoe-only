@@ -1,0 +1,97 @@
+@import "../scss/variables";
+
+
+.swiper{
+
+&__buttons {
+  z-index: 99;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px;
+}
+
+
+  &__button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid $base-color;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+
+    &-prev, &-next{
+      max-width: 10px;
+    }
+    &-next{
+      transform: rotate(180deg);
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &__pagination {
+      font-size: 14px;
+      color: $base-color !important;
+    }
+
+    &-disabled{
+      opacity: 50%;
+    }
+  }
+
+  &-button-disabled{
+    opacity: 50%;
+  }
+
+  &__pagination{
+    font-size: 14px;
+    color: $base-color ;
+    margin-top: 20px;
+  }
+
+  &__buttons-two{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    z-index: 999999999;
+
+
+    .swiper__button {
+      border: 1px solid white;
+      box-shadow: 0px 0px 15px rgb(56 119 238 / 32%);
+      background: white;
+
+      &-prev, &-next{
+        max-width: 10px;
+
+      }
+      &-next{
+        transform: rotate(180deg);
+      }
+    }
+
+    .swiper__button-two-hidden{
+      display: none;
+    }
+  }
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .swiper {
+    &__buttons {
+      display: none;
+    }
+
+    &-not-active{
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "variables";
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../../accept/PTSans-Bold.eot');
+  src: url('../../accept/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../accept/PTSans-Bold.woff2') format('woff2'),
+  url('../../accept/PTSans-Bold.woff') format('woff'),
+  url('../../accept/PTSans-Bold.ttf') format('truetype'),
+  url('../../accept/PTSans-Bold.svg#PTSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../../accept/PTSans-Regular.eot');
+  src: url('../../accept/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../accept/PTSans-Regular.woff2') format('woff2'),
+  url('../../accept/PTSans-Regular.woff') format('woff'),
+  url('../../accept/PTSans-Regular.ttf') format('truetype'),
+  url('../../accept/PTSans-Regular.svg#PTSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans';
+  font-weight: 400;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.container{
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  border-left: 1px solid $color-opacity ;
+  border-right: 1px solid $color-opacity ;
+  position: relative;
+  padding: 170px 60px 0
+}
+
+.lineVertical{
+  border: 1px solid #5D5FEF;
+  position: absolute;
+  left: 50%;
+}
+
+
+
+
+@media (max-width: 1440px) {
+  .container{
+    padding: 80px 30px 0
+  }
+}
+
+@media (max-width: 1024px) {
+  .container{
+    padding: 60px 20px 0
+  }
+}

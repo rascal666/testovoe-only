@@ -1,0 +1,63 @@
+@import "./src/scss/variables";
+
+.point{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $base-color;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+
+  &__title{
+    position: relative;
+    left: 70px;
+    top: -40px;
+    font-weight: 700;
+  }
+  &__span{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+  }
+
+}
+
+.point-active {
+  border-radius: 50%;
+  color: black;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #303E58;
+  background: white;
+  animation: amimaPoint ease .5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.point-activeNone {
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes amimaPoint {
+  0% {
+    width: 6px;
+    height: 6px;
+    display: none;
+  }
+  100% {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #303E58;
+    background: white;
+  }
+}
